@@ -16,13 +16,21 @@ app.get('/news', async (req, res) => {
     // Parse XML to JSON
     const jsonData = await xml2js.parseStringPromise(xmlData, { explicitArray: false });
 
-    // Extract relevant information
-    const newsList = jsonData.rss.channel.item.map(item => ({
-      title: item.title,
-      link: item.link,
-      published: item.pubDate,
-      summary: item.description,
-    }));
+    // Extract relevant information, including images
+    const newsList = jsonData.rss.channel.item.slice(0, 6).map(item => {
+      const image =
+        item['media:content'] && item['media:content']['$'] && item['media:content']['$'].url
+          ? item['media:content']['$'].url
+          : null;
+
+      return {
+        title: item.title,
+        link: item.link,
+        published: item.pubDate,
+        summary: item.description,
+        image: image,
+      };
+    });
 
     // Format the data
     const formattedData = { news: newsList };
