@@ -5,7 +5,7 @@ const xml2js = require('xml2js');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const NEWS_FEED_URL = 'https://www.thehindu.com/news/international/feeder/default.rss';
+const NEWS_FEED_URL = 'https://www.thehindu.com/sport/feeder/default.rss';
 
 app.get('/news', async (req, res) => {
   try {
