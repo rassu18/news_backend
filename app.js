@@ -1,13 +1,21 @@
 const express = require('express');
 const axios = require('axios');
 const xml2js = require('xml2js');
+const core = require('cors') ;
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const corsOptions={
+		origin:'https://latest-news-india.onrender.com', 
+  credentials: true, 
+  optionSuccessStatus:200
+ } 
+app.use(cors(corsOptions)):
+
 const NEWS_FEED_URL = 'https://www.thehindu.com/sport/feeder/default.rss';
 
-app.get('/news', async (req, res) => {
+app.get('/sports', async (req, res) => {
   try {
     // Fetch the RSS feed
     const response = await axios.get(NEWS_FEED_URL);
