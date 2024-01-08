@@ -1,19 +1,15 @@
 const express = require('express');
 const axios = require('axios');
 const xml2js = require('xml2js');
-const core = require('cors') ;
+const cors = require('cors'); // Import the cors middleware
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const corsOptions={
-		origin:'https://latest-news-india.onrender.com', 
-  credentials: true, 
-  optionSuccessStatus:200
- } 
-app.use(cors(corsOptions));
+const NEWS_FEED_URL = 'https://www.thehindu.com/news/international/feeder/default.rss';
 
-const NEWS_FEED_URL = 'https://www.thehindu.com/sport/feeder/default.rss';
+// Enable CORS for all routes
+app.use(cors());
 
 app.get('/sports', async (req, res) => {
   try {
