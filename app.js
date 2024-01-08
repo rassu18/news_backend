@@ -38,7 +38,7 @@ app.get('/news/:category', async (req, res) => {
         const jsonData = await xml2js.parseStringPromise(xmlData, { explicitArray: false });
 
         // Extract relevant information, including images
-        return jsonData.rss.channel.item.slice(0, 10).map(item => {
+        return jsonData.rss.channel.item.slice(0, 9).map(item => {
           const image =
             item['media:content'] && item['media:content']['$'] && item['media:content']['$'].url
               ? item['media:content']['$'].url
