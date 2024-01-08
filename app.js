@@ -11,7 +11,7 @@ const corsOptions={
   credentials: true, 
   optionSuccessStatus:200
  } 
-app.use(cors(corsOptions)):
+app.use(cors(corsOptions));
 
 const NEWS_FEED_URL = 'https://www.thehindu.com/sport/feeder/default.rss';
 
