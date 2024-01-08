@@ -6,7 +6,7 @@ const cors = require('cors'); // Import the cors middleware
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const NEWS_FEED_URL = 'https://www.thehindu.com/news/international/feeder/default.rss';
+const NEWS_FEED_URL = 'https://www.thehindu.com/sport/feeder/default.rss';
 
 // Enable CORS for all routes
 app.use(cors());
