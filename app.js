@@ -4,7 +4,7 @@ const xml2js = require('xml2js');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3000;
 
 const RSS_FEEDS = {
   international: ['https://www.thehindu.com/news/international/feeder/default.rss'],
@@ -58,8 +58,8 @@ app.get('/news/:category', async (req, res) => {
 
     const newsList = allNews.flat();
 
-    // Ensure the count is a multiple of 3 and has at least 18 items
-    const itemCount = Math.max(18, Math.ceil(newsList.length / 3) * 3);
+    // Ensure the count is at least 18 and maximum 30 items
+    const itemCount = Math.min(Math.max(18, newsList.length), 30);
     const trimmedNewsList = newsList.slice(0, itemCount);
 
     const formattedData = { category: category, news: trimmedNewsList };
