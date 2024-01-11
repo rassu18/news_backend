@@ -4,15 +4,42 @@ const xml2js = require('xml2js');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 
 const RSS_FEEDS = {
   international: ['https://www.thehindu.com/news/international/feeder/default.rss'],
   national: [
     'https://www.thehindu.com/news/national/feeder/default.rss',
     'https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml',
+    'https://feeds.feedburner.com/ndtvnews-latest',
   ],
-  business: ['https://www.thehindu.com/business/feeder/default.rss'],
+  business: [
+    'https://www.thehindu.com/business/feeder/default.rss',
+    'https://feeds.feedburner.com/ndtvprofit-latest',
+],
+entertainment: [
+  'https://www.hindustantimes.com/feeds/rss/entertainment/bollywood/rssfeed.xml',
+  'https://feeds.feedburner.com/ndtvmovies-latest',
+],
+health: [
+  'https://www.hindustantimes.com/feeds/rss/ht-insight/public-health/rssfeed.xml',
+  'https://feeds.feedburner.com/ndtvcooks-latest',
+],
+science: [
+  'https://www.hindustantimes.com/feeds/rss/ht-insight/public-health/rssfeed.xml',
+  'https://www.hindustantimes.com/feeds/rss/science/rssfeed.xml',
+],
+tech:[
+  'https://www.hindustantimes.com/feeds/rss/technology/rssfeed.xml',
+  'https://feeds.feedburner.com/gadgets360-latest',
+],
+sport:[
+  'https://feeds.feedburner.com/ndtvsports-latest',
+  'https://www.hindustantimes.com/feeds/rss/sports/rssfeed.xml',
+],
+
+
+
   // Add more categories and feed URLs as needed
 };
 
