@@ -26,8 +26,7 @@ health: [
   'https://feeds.feedburner.com/ndtvcooks-latest',
 ],
 science: [
-  'https://www.hindustantimes.com/feeds/rss/ht-insight/public-health/rssfeed.xml',
-  'https://www.thehindu.com/sci-tech/science/feeder/default.rss',
+    'https://www.thehindu.com/sci-tech/science/feeder/default.rss',
 ],
 tech:[
   'https://www.hindustantimes.com/feeds/rss/technology/rssfeed.xml',
