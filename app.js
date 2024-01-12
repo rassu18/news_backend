@@ -41,27 +41,28 @@ hinational: [
   'https://hindi.news18.com/commonfeeds/v1/hin/rss/nation/nation.xml',
   
 ],
-business: [
-  'https://www.thehindu.com/business/feeder/default.rss',
-  'https://feeds.feedburner.com/ndtvprofit-latest',
+hibusiness: [
+  'https://hindi.news18.com/commonfeeds/v1/hin/rss/business/online-business.xml',
+ 
 ],
-entertainment: [
-'https://www.hindustantimes.com/feeds/rss/entertainment/bollywood/rssfeed.xml',
-'https://feeds.feedburner.com/ndtvmovies-latest',
+hientertainment: [
+'https://hindi.news18.com/commonfeeds/v1/hin/rss/entertainment/entertainment.xml',
+
 ],
-health: [
-'https://feeds.feedburner.com/ndtvcooks-latest',
+hihealth: [
+'https://hindi.news18.com/commonfeeds/v1/hin/rss/lifestyle/health.xml',
 ],
-science: [
-  'https://www.thehindu.com/sci-tech/science/feeder/default.rss',
+hiscience: [
+  'https://hindi.news18.com/commonfeeds/v1/hin/rss/business/innovation.xml',
 ],
-tech:[
-'https://www.hindustantimes.com/feeds/rss/technology/rssfeed.xml',
-'https://feeds.feedburner.com/gadgets360-latest',
+hitech:[
+'https://hindi.news18.com/commonfeeds/v1/hin/rss/tech/tech.xml',
+'https://hindi.news18.com/commonfeeds/v1/hin/rss/tech/apps.xml',
 ],
-sport:[
-'https://feeds.feedburner.com/ndtvsports-latest',
-'https://www.hindustantimes.com/feeds/rss/sports/rssfeed.xml',
+hisport:[
+'https://hindi.news18.com/commonfeeds/v1/hin/rss/sports/cricket.xml',
+'https://hindi.news18.com/commonfeeds/v1/hin/rss/sports/tennis.xml',
+'https://hindi.news18.com/commonfeeds/v1/hin/rss/sports/football.xml',
 ],
 
 
