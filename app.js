@@ -22,7 +22,6 @@ entertainment: [
   'https://feeds.feedburner.com/ndtvmovies-latest',
 ],
 health: [
-  'https://www.hindustantimes.com/feeds/rss/ht-insight/public-health/rssfeed.xml',
   'https://feeds.feedburner.com/ndtvcooks-latest',
 ],
 science: [
