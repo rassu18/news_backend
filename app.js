@@ -36,6 +36,36 @@ sport:[
   'https://www.hindustantimes.com/feeds/rss/sports/rssfeed.xml',
 ],
 
+
+hinational: [
+  'https://hindi.news18.com/commonfeeds/v1/hin/rss/nation/nation.xml',
+  
+],
+business: [
+  'https://www.thehindu.com/business/feeder/default.rss',
+  'https://feeds.feedburner.com/ndtvprofit-latest',
+],
+entertainment: [
+'https://www.hindustantimes.com/feeds/rss/entertainment/bollywood/rssfeed.xml',
+'https://feeds.feedburner.com/ndtvmovies-latest',
+],
+health: [
+'https://feeds.feedburner.com/ndtvcooks-latest',
+],
+science: [
+  'https://www.thehindu.com/sci-tech/science/feeder/default.rss',
+],
+tech:[
+'https://www.hindustantimes.com/feeds/rss/technology/rssfeed.xml',
+'https://feeds.feedburner.com/gadgets360-latest',
+],
+sport:[
+'https://feeds.feedburner.com/ndtvsports-latest',
+'https://www.hindustantimes.com/feeds/rss/sports/rssfeed.xml',
+],
+
+
+
 };
 
 app.use(cors());
