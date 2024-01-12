@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 3001;
 
 const RSS_FEEDS = {
-  international: ['https://www.thehindu.com/news/international/feeder/default.rss'],
+  // Your existing RSS feeds
   national: [
     'https://www.thehindu.com/news/national/feeder/default.rss',
     'https://www.hindustantimes.com/feeds/rss/india-news/rssfeed.xml',
@@ -36,9 +36,6 @@ sport:[
   'https://www.hindustantimes.com/feeds/rss/sports/rssfeed.xml',
 ],
 
-
-
-  // Add more categories and feed URLs as needed
 };
 
 app.use(cors());
@@ -58,13 +55,17 @@ app.get('/news/:category', async (req, res) => {
         const jsonData = await xml2js.parseStringPromise(xmlData, { explicitArray: false });
 
         return jsonData.rss.channel.item
-          .slice(0, 6)
           .filter(item => {
-            const image =
+            // Check if required fields are present
+            return (
+              item.title &&
+              item.link &&
+              item.pubDate &&
+              item.description &&
               item['media:content'] &&
               item['media:content']['$'] &&
-              item['media:content']['$'].url;
-            return image !== undefined && image !== null;
+              item['media:content']['$'].url
+            );
           })
           .map(item => {
             const image =
@@ -83,11 +84,7 @@ app.get('/news/:category', async (req, res) => {
 
     const newsList = allNews.flat();
 
-    // Ensure the count is at least 18 and maximum 30 items
-    const itemCount = Math.min(Math.max(18, newsList.length), 30);
-    const trimmedNewsList = newsList.slice(0, itemCount);
-
-    const formattedData = { category: category, news: trimmedNewsList };
+    const formattedData = { category: category, news: newsList };
 
     res.json(formattedData);
   } catch (error) {
