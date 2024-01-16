@@ -18,8 +18,12 @@ const RSS_FEEDS = {
     'https://feeds.feedburner.com/ndtvprofit-latest',
 ],
 entertainment: [
+  'https://www.bollywoodhungama.com/rss/news.xml',
+  
+  'https://www.bollywoodhungama.com/rss/movie-release-date.xml',
+  'https://www.bollywoodhungama.com/rss/movie-review.xml',
   'https://www.hindustantimes.com/feeds/rss/entertainment/bollywood/rssfeed.xml',
-  'https://feeds.feedburner.com/ndtvmovies-latest',
+
 ],
 health: [
   'https://feeds.feedburner.com/ndtvcooks-latest',
@@ -47,6 +51,7 @@ hibusiness: [
 ],
 hientertainment: [
 'https://hindi.news18.com/commonfeeds/v1/hin/rss/entertainment/entertainment.xml',
+
 
 ],
 hihealth: [
