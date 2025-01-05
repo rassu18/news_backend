@@ -39,6 +39,9 @@ sport:[
   'https://feeds.feedburner.com/ndtvsports-latest',
   'https://www.hindustantimes.com/feeds/rss/sports/rssfeed.xml',
 ],
+ topstory:[
+   'https://feeds.feedburner.com/ndtvnews-top-stories' 
+ ],
 
 
 hinational: [
